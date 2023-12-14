@@ -27,8 +27,8 @@ void Fun4All_Combiner(int nEvents = 0,
 		      const string &input_file08 = "hcalwest.list",
 		      const string &input_file09 = "hcaleast.list",
 		      const string &input_file10 = "zdc.list",
-		      const string &input_file11 = "mbd.list",
-		      const string &outputDir = "." )
+		      const string &input_file11 = "mbd.list",		      
+		      const string &outputName = "" )
 {
  cout << input_file00 << endl;
  cout << input_file01 << endl;
@@ -77,7 +77,8 @@ void Fun4All_Combiner(int nEvents = 0,
 //  Fun4AllEventOutputManager *out = new Fun4AllEventOutputManager("EvtOut","/sphenix/lustre01/sphnxpro/commissioning/aligned/beam-%08d-%04d.prdf",20000);
 //  Fun4AllEventOutputManager *out = new Fun4AllEventOutputManager("EvtOut","./beam_emcal-%08d-%04d.prdf",nGB*1000.0);
 //  Fun4AllEventOutputManager *out = new Fun4AllEventOutputManager("EvtOut", outputDir+"/"+"beam_emcal-%08d-%04d.prdf",20000);
-  Fun4AllEventOutputManager *out = new Fun4AllEventOutputManager("EvtOut", "/sphenix/lustre01/sphnxpro/commissioning/aligned_v2/beam-%08d-%04d.prdf",0,2000);
+  Fun4AllEventOutputManager *out = new Fun4AllEventOutputManager("EvtOut", outputDir + "/" + outputName + "-%08d-%04d.prdf",0,20000);
+//"/sphenix/lustre01/sphnxpro/commissioning/aligned_v2/beam-%08d-%04d.prdf",0,2000);
 //    out->DropPacket(21102);
   se->registerOutputManager(out);
 

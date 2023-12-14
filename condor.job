@@ -1,0 +1,17 @@
+Universe        = vanilla
+Notification    = Never
+Executable      = run.csh
+Arguments       = $(RunNumber)
+Requirements    = CPU_Speed >= 1
+Rank		= CPU_Speed
+Priority        = +20
+Initialdir      = /sphenix/u/sphnxpro/lebedev/eventcombine
+Input           = /dev/null
+Output          = /sphenix/user/sphnxpro/production/logs/combine2G_$(RunNumber).out
+Error           = /sphenix/user/sphnxpro/production/logs/combine2G_$(RunNumber).err 
+Log             = /tmp/combine2G_$(RunNumber).log 
+request_memory  = 12G
+request_cpus    = 1
+PeriodicHold    = (NumJobStarts>=1 && JobStatus == 1)
+Queue 1
+
